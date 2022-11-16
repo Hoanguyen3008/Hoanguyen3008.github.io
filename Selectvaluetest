@@ -19,11 +19,73 @@ class Selectvalue {
         try {
             Thread.sleep(5000); // 1s = 1000mls
             Select dropdown = new Select(driver.findElement(By.id("myCarList")));
-            dropdown.selectByIndex(5);
+            dropdown.selectByIndex(1); //chọn tại chỉ mục đã cho
             ;
         } catch (Exception e) {
             System.out.println(e);
         }
     }
+    
+    @Test
+    void test2() {
+        WebDriverManager.chromedriver().setup();
+        ChromeDriver driver = new ChromeDriver();
+        driver.get(url);
+        try {
+            Thread.sleep(5000); // 1s = 1000mls
+            Select dropdown = new Select(driver.findElement(By.id("myCarList")));
+            dropdown.selectByIndex(2); //chọn tại chỉ mục đã cho
+            ;
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+    
+    @Test
+    void test3() {
+        WebDriverManager.chromedriver().setup();
+        ChromeDriver driver = new ChromeDriver();
+        driver.get(url);
+        try {
+            Thread.sleep(5000); // 1s = 1000mls
+            Select dropdown = new Select(driver.findElement(By.id("myCarList")));
+            dropdown.selectByIndex(3); //chọn tại chỉ mục đã cho
+            ;
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+    
+    @Test
+    void test4() {
+        WebDriverManager.chromedriver().setup();
+        ChromeDriver driver = new ChromeDriver();
+        driver.get(url);
+        try {
+            Thread.sleep(5000); // 1s = 1000mls
+            Select dropdown = new Select(driver.findElement(By.id("myCarList")));
+            dropdown.selectByIndex(4); //chọn tại chỉ mục đã cho
+            ;
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+    
+    @Test
+    void test5() {
+        WebDriverManager.chromedriver().setup();
+        ChromeDriver driver = new ChromeDriver();
+        driver.get(url);
+        try {
+            Thread.sleep(5000); // 1s = 1000mls
+            Select dropdown = new Select(driver.findElement(By.id("myCarList")));
+            dropdown.selectByIndex(5); //chọn tại chỉ mục đã cho
+            ;
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+    
+    
 
 }
