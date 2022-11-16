@@ -23,27 +23,66 @@ class Keyboard {
         ChromeDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get(url);
-        // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         // dau vao cua thanh text box co ten lop la keyboard
         // sendKeys = go ban phim
-        driver.findElement(By.className("keyboard")).sendKeys("Hello");
+        driver.findElement(By.className("keyboard")).sendKeys("Hello ");
 
         WebElement keyBoard = driver.findElement(By.className("keyboard"));
-
+        //driver.findElement(By.className(<element class>)) định vị một phần tử bằng thuộc tính class
         Actions actions = new Actions(driver);
         actions.moveToElement(keyBoard)
-                /*.pause(Duration.ofSeconds(3))
-                .keyDown(Keys.SHIFT)
-                .sendKeys(keyBoard, "hoa") // print "HOA"
-                .pause(Duration.ofSeconds(3))
-                .doubleClick()
-                .pause(Duration.ofSeconds(3))
-                .keyUp(Keys.DELETE)
-                .sendKeys(keyBoard, "XIN CHAO")*/
-                .build()
-                .perform();
+                .build().perform();
 
     }
+   
+    @Test
+    void test2() {
+        WebDriverManager.chromedriver().setup();
+        ChromeDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get(url);
+        // dau vao cua thanh text box co ten lop la keyboard
+        // sendKeys = go ban phim
+        driver.findElement(By.className("keyboard")).sendKeys("Hello ");
+
+        WebElement keyBoard = driver.findElement(By.className("keyboard"));
+        //driver.findElement(By.className(<element class>)) định vị một phần tử bằng thuộc tính class
+        Actions actions = new Actions(driver);
+        actions.moveToElement(keyBoard)
+                .pause(Duration.ofSeconds(3))
+                .keyDown(Keys.SHIFT)
+                .sendKeys(keyBoard, "hoa ") // print "HOA"
+                .pause(Duration.ofSeconds(3))
+                .build().perform();
+
+    }
+    
+    @Test
+    void test3() {
+        WebDriverManager.chromedriver().setup();
+        ChromeDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get(url);
+        // dau vao cua thanh text box co ten lop la keyboard
+        // sendKeys = go ban phim
+        driver.findElement(By.className("keyboard")).sendKeys("Hello ");
+
+        WebElement keyBoard = driver.findElement(By.className("keyboard"));
+        //driver.findElement(By.className(<element class>)) định vị một phần tử bằng thuộc tính class
+        Actions actions = new Actions(driver);
+        actions.moveToElement(keyBoard)
+                .pause(Duration.ofSeconds(3))
+                .keyDown(Keys.SHIFT)
+                .sendKeys(keyBoard, "hoa ") // print "HOA"
+                .pause(Duration.ofSeconds(3))
+                //.doubleClick()
+                .pause(Duration.ofSeconds(3))
+                .keyUp(Keys.SHIFT)
+                .sendKeys(keyBoard, "xin chao")//print "xin chao"
+                .build().perform();
+
+    }
+
 
 }
 
